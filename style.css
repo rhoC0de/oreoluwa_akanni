@@ -9,7 +9,7 @@ body {
 }
 
 /* Header/logo Title */
-.header {
+header {
     padding: 80px;
     text-align: center;
     /* background: #1abc9c; */
@@ -18,14 +18,35 @@ body {
 }
 
 /* Increase the font size of the heading */
-.header h1 {
+header h1 {
     font-size: 40px;
 }
 
-.after-header {
+nav {
     background-color: #1abc9c;
     width: 100%;
-    padding: 10px;
+    text-align: right;
+    padding: 0 10px 0 10px;
+}
+
+nav span,
+nav span a,
+nav span a:visited {
+    /* float:right; */
+    margin: 0px;
+    text-align: center;
+    line-height: 40px;
+    color: #f1f1f1;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 20px 0 20px;
+    /* padding-right: 20px; */
+}
+
+nav span a:hover {
+    color: #f1f1f1;
+    background-color: #106957;
 }
 
 /* Column container */
@@ -36,11 +57,13 @@ body {
     -ms-flex-wrap: wrap;
     /* IE10 */
     flex-wrap: wrap;
+    background-color: #f1f1f1;
+    margin-top: 10px;
 }
 
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
-.side {
+.left {
     -ms-flex: 30%;
     /* IE10 */
     flex: 30%;
@@ -48,12 +71,12 @@ body {
     padding: 20px;
 }
 
-#main-img {
-    height: 30%;
+.left img {
+    height: 90%;
 }
 
 /* Main column */
-.main {
+.right {
     -ms-flex: 70%;
     /* IE10 */
     flex: 70%;
@@ -63,40 +86,55 @@ body {
     text-align: center;
     line-height: 30px;
     /* float: center; */
+    /* justify-items: center; */
 }
 
-.main h2 {
+.right h2 {
     width: 90%;
-    padding-left: 10%;
+    /* padding-left: 10%; */
 }
 
-.main p {
+.right p {
     width: 90%;
-    padding-left: 10%;
+    /* padding-left: 10%; */
 }
 
-button {
+#right-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#right-content a {
+    text-decoration: none;
+}
+
+a button {
     display: flex;
     align-items: center;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 0px 10px 20px;
     font-size: 16px;
     font-weight: 700;
     color: white;
     background-color: #1abc9c;
     border: none;
     border-radius: 15px;
+    width: 205px;
+}
+
+#form{
     text-align: center;
-    /* vertical-align: middle; */
-    /* margin-left: 35%; */
+    margin: 50px;
+}
+
+#form input{
+    margin-top: 10px;
 }
 
 button:hover {
     color: #f1f1f1;
     background-color: #106957;
-}
-
-button b {
-    padding: 0px;
 }
 
 .icon {
@@ -107,14 +145,15 @@ button b {
 }
 
 /* Fake image, just for this example */
-.fakeimg {
+.background {
     background-color: #aaa;
     width: 100%;
     padding: 10px;
 }
 
-#last {
+#end {
     background-color: #ddd;
+    padding-top: 10px;
 }
 
 h3 {
@@ -122,7 +161,7 @@ h3 {
 }
 
 .experience {
-    width: 22%;
+    width: 47%;
     display: inline-block;
     margin-left: 2%;
 }
@@ -145,7 +184,7 @@ h3 {
         width: 47%;
     }
 
-    .header {
+    header {
         width: 100%;
     }
 }
@@ -161,7 +200,7 @@ h3 {
         width: 47%;
     }
 
-    .header {
+    header {
         width: 100%;
     }
 }
